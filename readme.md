@@ -10,6 +10,13 @@
 
 - Install python
 - pip install -r requirements.txt
+- Download checkpoints from [huggingface](https://huggingface.co/thefcraft/JARVIS-ckpt)
+- you can use
+  ```
+  git lfs install
+  git clone https://huggingface.co/thefcraft/JARVIS-ckpt
+  ```
+- paste the base_speakers and converter to checkpoints folder
   
 ## clone repo
 
