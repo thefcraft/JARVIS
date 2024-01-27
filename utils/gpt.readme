@@ -1,0 +1,67 @@
+# ollama -- linux/wsl not for windows
+curl https://ollama.ai/install.sh | sh
+
+ollama start
+ollama serve
+ollama run llama2
+
+
+
+
+
+
+
+# Error vllm not installing
+
+MODELs : 
+openllm start HuggingFaceH4/zephyr-7b-alpha --backend vllm
+openllm start mistralai/Mistral-7B-Instruct-v0.1
+openllm start mistralai/Mixtral-8x7B-Instruct-v0.1
+openllm start mistralai/Mixtral-8x7B-Instruct-v0.1 --backend vllm
+openllm start meta-llama/Llama-2-70b-chat-hf --backend pt
+openllm start meta-llama/Llama-2-70b-chat-hf --backend vllm
+openllm start stabilityai/stablelm-tuned-alpha-3b --backend vllm
+openllm start stabilityai/stablelm-tuned-alpha-3b --backend pt
+
+TRUST_REMOTE_CODE=True openllm start microsoft/phi-2 --quantize int8
+openllm start meta-llama/Llama-2-7b-chat-hf --backend vllm
+openllm start TheBloke/Llama-2-7B-Chat-GPTQ --quantize gptq
+openllm start TheBloke/zephyr-7B-alpha-AWQ --quantize awq
+openllm start squeeze-ai-lab/sq-llama-2-7b-w4-s0 --quantize squeezellm --serialization legacy
+
+
+
+
+
+laksh@ThefCraft MINGW64 /c/ThefCraft/AI/jarvis
+$ openllm -h
+Usage: openllm [OPTIONS] COMMAND [ARGS]...
+
+   ██████╗ ██████╗ ███████╗███╗   ██╗██╗     ██╗     ███╗   ███╗
+  ██╔═══██╗██╔══██╗██╔════╝████╗  ██║██║     ██║     ████╗ ████║
+  ██║   ██║██████╔╝█████╗  ██╔██╗ ██║██║     ██║     ██╔████╔██║
+  ██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║██║     ██║     ██║╚██╔╝██║
+  ╚██████╔╝██║     ███████╗██║ ╚████║███████╗███████╗██║ ╚═╝ ██║
+   ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝╚═╝     ╚═╝.
+
+  An open platform for operating large language models in production.
+  Fine-tune, serve, deploy, and monitor any LLMs with ease.
+
+Options:
+  -v, --version  Show the version and exit.
+  -h, --help     Show this message and exit.
+
+Commands:
+  build   Package a given models into a BentoLLM.
+  import  Setup LLM interactively.
+  models  List all supported models.
+  prune   Remove all saved models, and bentos built with OpenLLM locally.
+  query   Query a LLM interactively, from a terminal.
+  start   Start a LLMServer for any supported LLM.
+
+Extensions:
+  dive-bentos        Dive into a BentoLLM.
+  get-containerfile  Return Containerfile of any given Bento.
+  get-prompt         Helpers for generating prompts.
+  list-bentos        List available bentos built by OpenLLM.
+  list-models        List available models in lcoal store to be used wit OpenLLM.
