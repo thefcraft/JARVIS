@@ -1,5 +1,5 @@
 # Virtual assistant
-
+video demo [instagram](https://www.instagram.com/p/C2k_VdohUqf/)
 ## Setup LLM
 
 - Install [LM Studio](https://lmstudio.ai/) or and other openai API compatible server
